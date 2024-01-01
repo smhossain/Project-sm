@@ -1,0 +1,16 @@
+{
+  "search_in": "Search in",
+  "queries": "queries",
+  "tafseers": "tafseers",
+  "search_in_surah": "Search in Tafseer of Surah",
+  "next": "Next",
+  "previous": "Previous",
+  "please_create_account": "Please create an account here",
+  "register": "Register",
+  "name": "Name",
+  "email": "Email",
+  "password": "Password",
+  "password2": "Password Confirmation",
+  "email_required": "Email required",
+  "password_required": "Password required"
+}

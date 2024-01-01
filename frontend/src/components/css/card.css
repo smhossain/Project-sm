@@ -1,0 +1,136 @@
+.audio-card * {
+  direction: ltr;
+}
+
+.audio-card {
+  width: 100%;
+  overflow: hidden;
+  padding: 25px;
+}
+
+.audio-card .nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Image */
+.audio-card .img {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.audio-card .img img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Details */
+.audio-card .details {
+  width: 100%;
+  text-align: center;
+}
+
+.audio-card .details .title {
+  font-size: 1.2rem;
+}
+
+.audio-card .details .artist {
+  color: #bbb;
+}
+
+/* Progress */
+.audio-card .progress {
+  margin-top: 15px;
+}
+
+.audio-card .progress input {
+  width: 100%;
+  height: 16px;
+}
+
+/* Timer */
+.audio-card .timer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+/* Controls */
+.audio-card .controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.audio-card .controls #prev,
+.audio-card .controls #next {
+  font-size: 2.5rem;
+}
+
+.audio-card .controls .play {
+  width: 3.2rem;
+  height: 3.2rem;
+  background: linear-gradient(#fff 0%, #cecaca 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.audio-card .controls .play::before {
+  content: '';
+  position: absolute;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: inherit;
+  background: linear-gradient(#8dadff, #6e72a3 100%);
+}
+
+.audio-card .controls .play i {
+  background: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+}
+
+.audio-card .controls .volume {
+  width: 100%;
+  height: 50px;
+  background: #333;
+  color: #fff;
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  border-radius: 10px;
+  border: 1px solid #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  z-index: 5;
+  transition: bottom 0.2s linear;
+  gap: 5px;
+}
+
+.audio-card .controls .volume.show {
+  bottom: 0;
+}
+
+.audio-card .controls .volume input {
+  width: 100%;
+  height: 4px;
+}

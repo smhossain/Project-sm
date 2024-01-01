@@ -1,0 +1,21 @@
+{
+  "sma": "Sayed Mortadha Almohri",
+  "title": {
+    "first": "Tafseer Alhadi",
+    "second": "Author of Tafseer Alhadi, his eminence Sayed Mortadha Almohri",
+    "third": "It uses utility classNamees for typography and spacing to space content out within the larger container.",
+    "first_button": "Learn More",
+    "second_button": "Browse"
+  },
+  "mid_section": {
+    "publications": "Publications",
+    "precious_publications": "Precious Publications from Him in Different Subjects",
+    "button": "Go To Publications"
+  },
+  "queries_section": {
+    "latest_queries": "Latest Queries",
+    "latests_in_website_1": "Latest Queries Posted",
+    "latests_in_website_2": "In Our Website",
+    "go_to_queries": "Go To Queries"
+  }
+}

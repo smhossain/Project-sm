@@ -1,0 +1,16 @@
+{
+  "search_in": "البحث في",
+  "queries": "الاستفتاءات",
+  "tafseers": "التفاسير",
+  "search_in_surah": "البحث في تفسير سورة",
+  "next": "التالي",
+  "previous": "السابق",
+  "please_create_account": "يرجى انشاء حساب هنا",
+  "register": "التسجيل",
+  "name": "الاسم",
+  "email": "العنوان البريدي",
+  "password": "كلمة السر",
+  "password2": "تأكيد كلمة السر",
+  "email_required": "البريد الالكتروني مطلوب",
+  "password_required": "كلمة السر مطلوبة"
+}

@@ -1,0 +1,82 @@
+:root {
+  --primary-white: #fff;
+  --primary-gold: #ca9f4e;
+  --primary-green: rgb(24, 46, 43);
+  --primary-dark: rgba(255, 255, 255, 0);
+  --secondary-gold: #fbf3de;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.navbar-custom {
+  background-color: var(--primary-green);
+}
+
+nav a.nav-link {
+  letter-spacing: 0.0375rem;
+  cursor: pointer;
+}
+
+nav ul li {
+  text-transform: lowercase;
+}
+
+.navbar-nav > li > a {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+  color: var(--primary-white) !important;
+  border-top: 0.1875rem solid var(--primary-dark);
+}
+
+.navbar-nav > li > button.dropdown-toggle {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0.5rem 1rem; /* To maintain consistent spacing */
+  border-top: 0.1875rem solid transparent !important;
+  text-decoration: none;
+  color: var(--primary-white) !important;
+}
+
+.navbar-nav > li > button.dropdown-toggle:focus,
+.navbar-nav > li > button.dropdown-toggle:hover {
+  border-top: 0.1875rem solid var(--primary-gold) !important;
+  border-radius: 0; /* To remove rounded corners */
+}
+
+.navbar-nav > li:not(.active) > button.dropdown-toggle {
+  border-top: 0.1875rem solid transparent !important;
+}
+
+.navbar-nav > li.active > button.dropdown-toggle {
+  border-top: 0.1875rem solid var(--primary-gold) !important;
+  border-radius: 0 !important;
+}
+
+/* Styles for active dropdown-item */
+.dropdown-item.active {
+  background-color: var(--primary-gold) !important;
+}
+
+/* Center aligning text in the dropdown menu */
+.dropdown-menu {
+  text-align: center;
+}
+
+.navbar-brand {
+  max-width: 17.25rem;
+  padding: 0 !important;
+  height: 5.5rem !important;
+}
+
+.navbar-nav > li > a.active,
+.navbar-nav > li > a:focus {
+  border-top: 0.1875rem solid var(--primary-gold);
+}
+
+.navbar-nav > li > a:hover {
+  border-top: 0.1875rem solid var(--primary-gold);
+}

@@ -1,0 +1,455 @@
+:root {
+  --primary-white: #fff;
+  --primary-gold: #ca9f4e;
+  --primary-green: rgb(24, 46, 43);
+  --primary-dark: rgba(255, 255, 255, 0);
+  --secondary-gold: #fbf3de;
+}
+
+* {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'hafs';
+  src: local('hafs') url(./assets/fonts/UthmanicHafs1Ver18.woff2)
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'traditional';
+  src: local('traditional') url(./assets/fonts/TraditionalArabicRegular.ttf);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px; /* Adjust as needed */
+  flex-grow: 1;
+}
+
+.traditional-font {
+  font-family: 'traditional';
+}
+
+.full-height {
+  min-height: 100vh;
+}
+
+.quran-font {
+  font-family: 'hafs';
+  font-weight: 400;
+  font-size: 2em;
+  line-height: 1.65em;
+  text-align: justify;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.save {
+  margin-right: 8px;
+}
+
+.ayah-span {
+  margin-left: 8px;
+}
+
+.query-btn {
+  margin-top: 8px;
+}
+
+/* .btn-right {
+  display: flex;
+  justify-content: flex-end;
+} */
+
+.btn-close {
+  background: none;
+  border: none;
+  color: #000;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.edit {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.admin {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.rightToLeft {
+  direction: rtl !important;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.sidebar {
+  height: 100%;
+  width: 250px;
+  background-color: var(--primary-green);
+}
+
+.sidebarList {
+  height: auto;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebarList .row {
+  width: 100%;
+  height: 60px;
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebarList .row:hover {
+  cursor: pointer;
+  background-color: var(--primary-gold);
+  text-decoration: none;
+}
+
+.sidebarList .row.link {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebarList .active {
+  background-color: var(--primary-gold);
+}
+
+.row .icon {
+  flex: 30%;
+  display: grid;
+  place-items: center;
+}
+
+.row .title {
+  flex: 70%;
+}
+
+/* Sub-nav items container */
+.subNavItems {
+  width: 90%; /* Reducing width for a hierarchical look */
+  margin-left: auto; /* Centering the reduced width container */
+  margin-right: auto;
+}
+
+/* Individual sub-nav link styling */
+.subNavLink {
+  width: 100%;
+  height: 50px; /* Slightly reduced height */
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  justify-content: flex-start; /* Aligning to the start */
+  align-items: center;
+  padding-left: 30px; /* Left padding for an indented look */
+}
+
+.subNavLink:hover {
+  cursor: pointer;
+  background-color: var(--primary-gold);
+  text-decoration: none;
+  color: white; /* Ensuring the text color remains white on hover */
+}
+
+.subNavTitle {
+  flex: 100%; /* Giving it full width as there might not be an icon */
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease; /* Add transition effect */
+  position: absolute;
+  right: 10px;
+}
+
+.arrow.rtl {
+  right: initial;
+  left: 10px;
+}
+
+.arrow.rtl.down {
+  transform: rotate(-90deg);
+}
+
+.arrow.down {
+  transform: rotate(90deg); /* Rotate the arrow */
+}
+
+.arrowIcon {
+  display: inline-block;
+  transition: transform 0.3s;
+  margin-left: 10px;
+}
+
+.flippedArrow {
+  transform: scaleX(-1);
+}
+
+.row.subNavLink {
+  background-color: rgba(255, 255, 255, 0.1); /* A lighter color for sub-navs */
+}
+
+.subNavItems.ltr {
+  padding-left: 20px; /* Adjust as needed for LTR indentation */
+}
+
+.subNavItems.rtl {
+  padding-right: 20px; /* Adjust as needed for RTL indentation */
+}
+
+.custom-accordion .accordion-icon {
+  position: absolute;
+  right: 15px;
+  transition: all 0.3s;
+}
+
+.custom-accordion .card-body {
+  display: none;
+}
+
+.custom-accordion .accordion-active .card-body {
+  display: block;
+}
+
+.accordion-active .accordion-icon {
+  transform: rotate(90deg);
+}
+
+.custom-accordion .card-header {
+  cursor: pointer;
+}
+
+.ayah-span {
+  padding-right: 50px;
+}
+
+.accordion-item {
+  margin-bottom: 5px;
+  box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.accordion-header .accordion-button {
+  background-color: var(--secondary-gold); /* replace with your color */
+}
+
+/* Overwrite focus color of the accordion header */
+.accordion-header .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(66, 66, 66, 0.5);
+}
+
+/* If the accordion is not collapsed (meaning, it's active/open) */
+.accordion-header .accordion-button:not(.collapsed) {
+  background-color: var(--secondary-gold);
+}
+
+.jumbotron {
+  background-image: url(./assets/images/hero-pic9-2.png);
+  background-size: 100% 100%;
+}
+
+[dir='rtl'] .jumbotron {
+  transform: scaleX(-1); /* Flip the image horizontally */
+}
+
+[dir='rtl'] .jumbotron > .container {
+  transform: scaleX(
+    -1
+  ); /* Flip the jumbotron's content back to its original state */
+}
+
+.btn-green {
+  background-color: var(--primary-green) !important;
+  border: var(--primary-green) solid !important;
+}
+
+.btn-green:hover {
+  background-color: transparent !important;
+  border: var(--primary-green) solid !important;
+}
+
+.btn-green-on-white {
+  background-color: var(--primary-green) !important;
+  border: var(--primary-green) solid !important;
+  color: white !important;
+}
+
+.btn-green-on-white:hover {
+  background-color: transparent !important;
+  border: var(--primary-green) solid !important;
+  color: #000 !important;
+}
+
+.btn-gold {
+  background-color: var(--primary-gold) !important;
+  border: var(--primary-gold) solid !important;
+}
+
+.btn-gold:hover {
+  background-color: var(--primary-dark) !important;
+  border: var(--primary-gold) solid !important;
+}
+
+.btn-gold-on-white {
+  background-color: var(--primary-gold);
+  border: var(--primary-gold) solid !important;
+}
+
+.btn-gold-on-white:hover {
+  background-color: transparent;
+  border: var(--primary-gold) solid !important;
+  color: #000;
+}
+
+.mid-section-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.gold-background {
+  background-color: var(--primary-gold) !important;
+}
+
+.green-background {
+  background-color: var(--primary-green) !important;
+}
+
+/* Style for the card header */
+.gold-background-card {
+  background-color: var(--primary-gold) !important;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space out items on the main axis */
+  align-items: center; /* Align items vertically in the center */
+}
+
+/* Style for the button group */
+.button-group-card {
+  display: flex; /* Use flexbox for alignment */
+  gap: 0.5rem; /* Add a gap between buttons */
+}
+
+/* Style for individual buttons */
+.button-group-card button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.accordion-custom-header {
+  color: var(--secondary-gold) !important;
+}
+
+.tags-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.audio-player-hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.audio-player-shown {
+  max-height: 700px; /* Adjust as needed */
+  transition: max-height 0.5s ease-in;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+
+/* Hover effect for sidebar links */
+.nav-link:hover {
+  color: var(--primary-gold); /* Gold color on hover */
+  background-color: rgba(
+    202,
+    159,
+    78,
+    0.2
+  ); /* Optional: light gold background on hover */
+}
+
+/* Active link effect */
+.nav-link.active {
+  color: var(--primary-gold); /* Gold color for active link */
+  font-weight: bold; /* Optional: make the active link bold */
+}
+
+/* Subnav link hover effect */
+.subNavLink:hover {
+  color: var(--primary-gold); /* Gold color on hover for subnav links */
+}
+
+.material-symbols-outlined {
+  transition: transform 0.3s ease;
+}
+
+body[dir='ltr'] .material-symbols-outlined {
+  transform: rotate(0deg);
+}
+
+body[dir='rtl'] .material-symbols-outlined {
+  transform: rotate(180deg);
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+@media (min-width: 576px) {
+  .h-sm-100 {
+    height: 100%;
+  }
+}
